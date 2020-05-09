@@ -19,8 +19,11 @@ class WindowCenter(QWidget):
         self.setWindowTitle('Window Center')
 
     def Center(self):
+        #获得窗口
         qr = self.frameGeometry()
+        #获得屏幕中心点
         cp = QDesktopWidget().availableGeometry().center()
+        #显示到屏幕中心
         qr.moveCenter(cp)
         self.move(qr.topLeft())
 
